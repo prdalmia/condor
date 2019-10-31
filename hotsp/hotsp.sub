@@ -28,7 +28,7 @@ transfer_input_files = /home/pdalmia/projects/gpgpu-sim-v2/condor_workdir/cuda_f
 
 # For backprop, the argument is the network size; increasing this (must be divisible
 # by 16) will increase the runtime.  The value 8192 should result in a 2 minute runtime.
-arguments = 512 2 2 data/temp_512 data/power_512 #output.out
+arguments = 1024 2 2 data/temp_1024 data/power_1024 output-1024.out
 executable = hotsp.sh
 
 # Filenames for output; recall this will be put into $(initialdir), not the

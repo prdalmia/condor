@@ -18,7 +18,7 @@ stream_output = True
 # NOTE: the gpgpu-sim configuration files are a macro; to be
 # defined later.
 initialdir = results
-transfer_input_files = ../cuda_files.tar.gz, ../bc, ../gpgpusim.config, ../config_volta_islip.icnt, ../1k_128k.gr
+transfer_input_files = /home/pdalmia/projects/gpgpu-sim-v2/condor_workdir/cuda_files.tar.gz, ../bc, ../gpgpusim.config, ../config_volta_islip.icnt, ../1k_128k.gr
 
 # We do not specify `transfer_output_files`; accordingly *all* files created in the
 # top-level job directory will be copied to the `initialdir` specified above when

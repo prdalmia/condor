@@ -16,5 +16,5 @@ export LD_LIBRARY_PATH=$CUDA_INSTALL_PATH/lib
 export CUOBJDUMP_SIM_FILE=jj
 
 # Finally, execute backprop with the argument provided by the submit file.
-exec ./hotspot $1 $2 $3 $4 $5 #$6
+exec ./hotspot $1 $2 $3 $4 $5 $6
 

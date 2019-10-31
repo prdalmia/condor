@@ -21,7 +21,7 @@ stream_output = True
 # defined later.
 initialdir = results
 #transfer_input_files = /home/gjain6/cs758/cuda_files.tar.gz, /home/gjain6/cs758/bfs/bfs, /home/gjain6/cs758/bfs/gpgpusim.config, /home/gjain6/cs758/bfs/config_volta_islip.icnt, /home/gjain6/cs758/bfs/graph4096.txt
-transfer_input_files = /home/pdalmia/projects/gpgpu-sim-v2/condor_workdir, ../bfs, ../gpgpusim.config, ../config_volta_islip.icnt, ../graph4096.txt
+transfer_input_files = /home/pdalmia/projects/gpgpu-sim-v2/condor_workdir/cuda_files.tar.gz, ../bfs, ../gpgpusim.config, ../config_volta_islip.icnt, ../graph65536.txt
 
 # We do not specify `transfer_output_files`; accordingly *all* files created in the
 # top-level job directory will be copied to the `initialdir` specified above when
@@ -29,7 +29,7 @@ transfer_input_files = /home/pdalmia/projects/gpgpu-sim-v2/condor_workdir, ../bf
 
 # For backprop, the argument is the network size; increasing this (must be divisible
 # by 16) will increase the runtime.  The value 8192 should result in a 2 minute runtime.
-arguments = graph4096.txt
+arguments = graph65536.txt
 executable = bfs.sh
 
 # Filenames for output; recall this will be put into $(initialdir), not the
