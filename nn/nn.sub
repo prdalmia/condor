@@ -19,7 +19,7 @@ when_to_transfer_output = ON_EXIT
 # NOTE: the gpgpu-sim configuration files are a macro; to be
 # defined later.
 initialdir = results
-transfer_input_files = /home/gjain6/cs758/cuda_files.tar.gz, ../nn, ../filelist.txt, ../gpgpusim.config, ../config_volta_islip.icnt, ../cane4_0.db, ../cane4_1.db, ../cane4_2.db, ../cane4_3.db
+transfer_input_files = /home/pdalmia/projects/gpgpu-sim-v2/condor_workdir/cuda_files.tar.gz, ../nn, ../filelist.txt, ../gpgpusim.config, ../config_volta_islip.icnt, ../cane4_0.db, ../cane4_1.db, ../cane4_2.db, ../cane4_3.db
 
 # We do not specify `transfer_output_files`; accordingly *all* files created in the
 # top-level job directory will be copied to the `initialdir` specified above when

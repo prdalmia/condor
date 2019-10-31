@@ -20,7 +20,7 @@ when_to_transfer_output = ON_EXIT
 # defined later.
 initialdir = results
 #transfer_input_files = /home/gjain6/cs758/cuda_files.tar.gz, /home/gjain6/cs758/bfs/bfs, /home/gjain6/cs758/bfs/gpgpusim.config, /home/gjain6/cs758/bfs/config_volta_islip.icnt, /home/gjain6/cs758/bfs/graph4096.txt
-transfer_input_files = /home/gjain6/cs758/cuda_files.tar.gz, ../bfs, ../gpgpusim.config, ../config_volta_islip.icnt, ../graph4096.txt
+transfer_input_files = /home/pdalmia/projects/gpgpu-sim-v2/condor_workdir, ../bfs, ../gpgpusim.config, ../config_volta_islip.icnt, ../graph4096.txt
 
 # We do not specify `transfer_output_files`; accordingly *all* files created in the
 # top-level job directory will be copied to the `initialdir` specified above when
