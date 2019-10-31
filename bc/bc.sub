@@ -1,4 +1,3 @@
-# Loosely modeled on the starter submit file here:
 #   http://chtc.cs.wisc.edu/helloworld.shtml
 
 # Type of job we will be running
@@ -14,14 +13,12 @@ request_disk = 1GB
 should_transfer_files = YES
 when_to_transfer_output = ON_EXIT
 stream_output = True
-
 # Finally, which files to transfer.  We'll be using CUDA
 # and backprop for this example.
 # NOTE: the gpgpu-sim configuration files are a macro; to be
 # defined later.
 initialdir = results
-#transfer_input_files = /home/gjain6/cs758/cuda_files.tar.gz, /home/gjain6/cs758/bfs/bfs, /home/gjain6/cs758/bfs/gpgpusim.config, /home/gjain6/cs758/bfs/config_volta_islip.icnt, /home/gjain6/cs758/bfs/graph4096.txt
-transfer_input_files = /home/pdalmia/projects/gpgpu-sim-v2/condor_workdir, ../bfs, ../gpgpusim.config, ../config_volta_islip.icnt, ../graph4096.txt
+transfer_input_files = ../cuda_files.tar.gz, ../bc, ../gpgpusim.config, ../config_volta_islip.icnt, ../1k_128k.gr
 
 # We do not specify `transfer_output_files`; accordingly *all* files created in the
 # top-level job directory will be copied to the `initialdir` specified above when
@@ -29,16 +26,16 @@ transfer_input_files = /home/pdalmia/projects/gpgpu-sim-v2/condor_workdir, ../bf
 
 # For backprop, the argument is the network size; increasing this (must be divisible
 # by 16) will increase the runtime.  The value 8192 should result in a 2 minute runtime.
-arguments = graph4096.txt
-executable = bfs.sh
+arguments = 1k_128k.gr
+executable = bc.sh
 
 # Filenames for output; recall this will be put into $(initialdir), not the
 # submit directory.
-output = bfs.out
-error = bfs.err
+output = bc.out
+error = bc.err
 
 # Condor's logging for the job will go to this file.
-log = bfs.log
+log = bc.log
 
 queue 1
 

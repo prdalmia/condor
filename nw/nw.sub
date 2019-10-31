@@ -6,13 +6,14 @@ universe = vanilla
 
 # Resource requirements we need for this job
 request_cpus = 1
-request_memory = 2GB
+request_memory = 4GB
 request_disk = 1GB
 
 # Specify the policy for moving files between the execute
 # and submit environments
 should_transfer_files = YES
 when_to_transfer_output = ON_EXIT
+stream_output = True
 
 # Finally, which files to transfer.  We'll be using CUDA
 # and backprop for this example.

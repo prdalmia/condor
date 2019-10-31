@@ -6,20 +6,20 @@ universe = vanilla
 
 # Resource requirements we need for this job
 request_cpus = 1
-request_memory = 2GB
+request_memory = 4GB
 request_disk = 1GB
 
 # Specify the policy for moving files between the execute
 # and submit environments
 should_transfer_files = YES
 when_to_transfer_output = ON_EXIT
-
+stream_output = True
 # Finally, which files to transfer.  We'll be using CUDA
 # and backprop for this example.
 # NOTE: the gpgpu-sim configuration files are a macro; to be
 # defined later.
 initialdir = results
-transfer_input_files = /home/pdalmia/projects/gpgpu-sim-v2/condor_workdir/cuda_files.tar.gz, ../nn, ../filelist.txt, ../gpgpusim.config, ../config_volta_islip.icnt, ../cane4_0.db, ../cane4_1.db, ../cane4_2.db, ../cane4_3.db
+transfer_input_files = ../cuda_files.tar.gz, ../nn, ../filelist.txt, ../gpgpusim.config, ../config_volta_islip.icnt, ../cane4_0.db, ../cane4_1.db, ../cane4_2.db, ../cane4_3.db
 
 # We do not specify `transfer_output_files`; accordingly *all* files created in the
 # top-level job directory will be copied to the `initialdir` specified above when
