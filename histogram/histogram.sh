@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Unpack the CUDA files we will need:
+#Unpack the CUDA files we will need:
 tar zxf cuda_files.tar.gz
 
 # The GPGPU-Sim will look for this environment variable name to find the necessary
@@ -16,5 +16,4 @@ export LD_LIBRARY_PATH=$CUDA_INSTALL_PATH/lib
 export CUOBJDUMP_SIM_FILE=jj
 
 # Finally, execute backprop with the argument provided by the submit file.
-exec ./nn $1 $2 $3 $4 $5 $6 $7
-
+exec ./pagerank $1 $2

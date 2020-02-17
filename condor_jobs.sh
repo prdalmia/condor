@@ -16,7 +16,7 @@ basedir="runs"
 
 pids=()
 declare -a configs=("faTLB-128entry-20lat" "faTLB-128entry-40lat" "faTLB-64entry-20lat" "8wayTLB-128entry-20lat" "8wayTLB-128entry-40lat" "8wayTLB-64entry-20lat")
-declare -a benchmarks=("bfs" "backprop" "nw" "nn" "hotsp" "bc" "pagerank")
+declare -a benchmarks=("histogram" "bc" "pagerank")
 
 for benchmark in ${benchmarks[@]}
 do
@@ -47,9 +47,9 @@ do
 done
 
 # wait for children to die -- is this even relevant here?
-for pid in ${pids[*]}; do
-    wait $pid
-done
+#for pid in ${pids[*]}; do
+#    wait $pid
+#done
 
 # open the logs
 #for f in $(find runs | grep --color=auto errfile); do less $f; done
