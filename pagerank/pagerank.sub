@@ -4,9 +4,9 @@
 universe = vanilla
 
 # Resource requirements we need for this job
-request_cpus = 1
-request_memory = 4GB
-request_disk = 1GB
+request_cpus = 2
+request_memory = 8GB
+request_disk = 8GB
 
 # Specify the policy for moving files between the execute
 # and submit environments
@@ -18,7 +18,8 @@ stream_output = True
 # NOTE: the gpgpu-sim configuration files are a macro; to be
 # defined later.
 initialdir = results
-transfer_input_files = /home/pdalmia/projects/gpgpu-sim-v2/condor_workdir/cuda_files.tar.gz, ../pagerank, ../gpgpusim.config, ../config_volta_islip.icnt, ../coAuthorsDBLP.graph
+transfer_input_files = /nobackup/preyesh/cuda_files.tar.gz, ../pagerank, ../gpgpusim.config, ../config_volta_islip.icnt, ../net150_25.mtx
+
 
 # We do not specify `transfer_output_files`; accordingly *all* files created in the
 # top-level job directory will be copied to the `initialdir` specified above when
@@ -26,7 +27,7 @@ transfer_input_files = /home/pdalmia/projects/gpgpu-sim-v2/condor_workdir/cuda_f
 
 # For backprop, the argument is the network size; increasing this (must be divisible
 # by 16) will increase the runtime.  The value 8192 should result in a 2 minute runtime.
-arguments = coAuthorsDBLP.graph 1 
+arguments = net150_25.mtx 2
 executable = pagerank.sh
 
 # Filenames for output; recall this will be put into $(initialdir), not the

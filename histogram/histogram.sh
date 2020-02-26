@@ -16,4 +16,4 @@ export LD_LIBRARY_PATH=$CUDA_INSTALL_PATH/lib
 export CUOBJDUMP_SIM_FILE=jj
 
 # Finally, execute backprop with the argument provided by the submit file.
-exec ./pagerank $1 $2
+exec ./histogram_4k

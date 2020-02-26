@@ -16,4 +16,4 @@ export LD_LIBRARY_PATH=$CUDA_INSTALL_PATH/lib
 export CUOBJDUMP_SIM_FILE=jj
 
 # Finally, execute backprop with the argument provided by the submit file.
-exec ./bc $1
+exec ./bc_5 $1

@@ -15,8 +15,8 @@ launchdir=$PWD
 basedir="runs"
 
 pids=()
-declare -a configs=("faTLB-128entry-20lat" "faTLB-128entry-40lat" "faTLB-64entry-20lat" "8wayTLB-128entry-20lat" "8wayTLB-128entry-40lat" "8wayTLB-64entry-20lat")
-declare -a benchmarks=("histogram" "bc" "pagerank")
+declare -a configs=("lab_8" "lab_16" "lab_64" "lab_128" "lab_256" "lab_2048")
+declare -a benchmarks=("histogram_4k_32_16")
 
 for benchmark in ${benchmarks[@]}
 do
