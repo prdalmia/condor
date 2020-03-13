@@ -15,8 +15,8 @@ launchdir=$PWD
 basedir="runs"
 
 pids=()
-declare -a configs=("lab_8" "lab_16" "lab_64" "lab_128" "lab_256" "lab_2048")
-declare -a benchmarks=("histogram_4k_32_16")
+declare -a configs=("default")
+declare -a benchmarks=("dnnmark_test_alexnet" "dnnmark_test_SqueezeNet" "dnnmark_test_VGG19")
 
 for benchmark in ${benchmarks[@]}
 do
